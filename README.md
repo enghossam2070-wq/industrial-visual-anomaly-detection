@@ -1,19 +1,9 @@
 # Industrial Visual Anomaly Detection & Surface Defect Localization
-**Pharos University in Alexandria (PUA) — Faculty of Computer Science & Artificial Intelligence**  
-**Course:** Deep Learning (AI403) — Fall 2026  
-**Instructor:** Dr. Sahar Ghanem  
-**Teaching Assistants:** Esraa Habiba, Philopater Hany, Mohamed Ashraf  
 
 ---
 
-## 1. Project Title, Team Members, and Idea Chosen
+## 1. Project Title and Idea Chosen
 - **Project Title:** Unsupervised Industrial Visual Anomaly Detection and High-Resolution Defect Localization on MVTec AD
-- **Idea Chosen:** **Project #6 — Industrial visual anomaly detection** ($Image \rightarrow \text{anomaly score} + \text{map}$)
-- **Team Members:**
-  - Student 1 (Team Lead, System Architect & PatchCore/Coreset Algorithm Lead)
-  - Student 2 (Advanced DL Researcher, Reverse Distillation RD4AD & OCE Bottleneck)
-  - Student 3 (Data & Pipeline Engineer, Baseline AE & Classic ConvAE)
-  - Student 4 (Evaluation & Demo Engineer, Unified Evaluator, Gradio Live Demo & Error Analysis)
 
 ---
 
