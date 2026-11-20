@@ -1,7 +1,6 @@
 """
 Industrial Visual Anomaly Detection - Interactive Live Demo
-Pharos University in Alexandria - Faculty of Computer Science & AI
-Deep Learning AI403 - Fall 2026
+Automated Quality Control & Defect Localization
 """
 
 import os
@@ -162,11 +161,10 @@ def build_gradio_app():
         neutral_hue="slate"
     )
 
-    with gr.Blocks(theme=custom_theme, title="Industrial Visual Anomaly Detection - PUA AI403") as demo:
+    with gr.Blocks(theme=custom_theme, title="Industrial Visual Anomaly Detection Suite") as demo:
         gr.Markdown("""
         # 🏭 Industrial Visual Anomaly Detection & Surface Flaw Localization
-        ### Pharos University in Alexandria — Faculty of Computer Science & Artificial Intelligence
-        **Course:** Deep Learning (AI403) | **Instructor:** Dr. Sahar Ghanem | **TAs:** Esraa Habiba, Philopater Hany, Mohamed Ashraf
+        ### Automated Quality Control & High-Resolution Defect Segmentation
         
         *Upload an industrial product image or pick a test sample below to detect defects, calculate anomaly scores, and localize flaws in real-time.*
         """)
