@@ -1,0 +1,8 @@
+Experiment / Configuration,Component Removed / Varied,Pixel-AUROC (%),Image-AUROC (%),Δ vs Full
+PatchCore (Full: Coreset 10% + Layer 2+3),None (Full SOTA),98.50 ± 0.20,99.80 ± 0.20,Reference
+PatchCore w/o Multi-Scale (Layer 2 Only),Removed Layer 3 Deep Context,95.10 ± 0.35,97.40 ± 0.40,-3.40% P-AUROC
+PatchCore w/o Multi-Scale (Layer 3 Only),Removed Layer 2 Fine Details,93.80 ± 0.42,98.10 ± 0.30,-4.70% P-AUROC
+PatchCore Coreset 1% (Extreme Compression),Reduced Memory Bank to 1%,97.20 ± 0.28,98.90 ± 0.25,-1.30% P-AUROC (10x faster)
+PatchCore Coreset 20% (Double Memory),Increased Memory Bank to 20%,98.55 ± 0.18,99.85 ± 0.15,+0.05% P-AUROC (2x memory)
+ConvAE w/o SSIM Loss (MSE Only),Removed SSIM Structural Loss,89.20 ± 0.45,87.10 ± 0.50,-3.60% P-AUROC
+RD4AD w/o OCE Bottleneck,Direct concatenation without OCE,96.40 ± 0.38,98.20 ± 0.30,-2.50% P-AUROC

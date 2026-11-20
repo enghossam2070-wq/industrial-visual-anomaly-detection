@@ -1,0 +1,29 @@
+# Config: Baseline Linear / Shallow Convolutional Autoencoder
+experiment_name: "baseline_ae"
+category: "bottle"
+data_dir: "./data/mvtec_anomaly_detection"
+output_dir: "./experiments/baseline_ae"
+
+model:
+  name: "baseline_ae"
+  input_dim: [3, 224, 224]
+  latent_dim: 128
+  hidden_dims: [64, 128]
+
+training:
+  batch_size: 16
+  epochs: 40
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  optimizer: "Adam"
+  lr_scheduler: "CosineAnnealingLR"
+  val_split: 0.15
+  seed: 42
+
+loss:
+  type: "MSE"
+
+evaluation:
+  metric: "AUROC"
+  save_heatmaps: true
+  threshold_method: "best_f1"

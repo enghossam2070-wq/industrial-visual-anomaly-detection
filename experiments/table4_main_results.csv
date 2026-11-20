@@ -1,0 +1,5 @@
+Model Architecture,Image-level AUROC (%),Pixel-level AUROC (%),PRO Score (%),F1-Score (%),Inference Latency (ms),Train Time (s),Parameters (M),Model Size (MB)
+Baseline AE (Linear/Conv),83.27 ± 0.80,87.13 ± 0.65,74.27 ± 0.80,81.10 ± 0.80,3.8,42.1,0.24,0.96
+Classic Deep ConvAE (SSIM+L2),90.43 ± 0.65,92.77 ± 0.65,83.37 ± 0.75,88.43 ± 0.70,8.2,118.5,4.12,16.48
+Modern PatchCore (Coreset 10%),99.80 ± 0.20,98.50 ± 0.20,95.23 ± 0.35,98.83 ± 0.35,19.4,24.4,68.88,275.52
+Advanced Reverse Distillation (RD4AD),99.93 ± 0.12,98.90 ± 0.20,96.13 ± 0.35,99.37 ± 0.25,14.1,182.3,78.45,313.80

@@ -1,0 +1,32 @@
+# Config: Advanced Deep Learning Architecture - Reverse Distillation (RD4AD, Deng & Li, CVPR 2022)
+experiment_name: "advanced_rd4ad"
+category: "bottle"
+data_dir: "./data/mvtec_anomaly_detection"
+output_dir: "./experiments/advanced_rd4ad"
+
+model:
+  name: "reverse_distillation"
+  backbone: "wide_resnet50_2" # Teacher network
+  pretrained: true
+  bottleneck_channels: 512
+  layers: ["layer1", "layer2", "layer3"]
+
+training:
+  batch_size: 16
+  epochs: 60
+  learning_rate: 0.005
+  weight_decay: 0.0001
+  optimizer: "Adam"
+  lr_scheduler: "StepLR"
+  lr_step: 40
+  lr_gamma: 0.2
+  val_split: 0.15
+  seed: 42
+
+loss:
+  type: "MultiScaleCosineLoss"
+
+evaluation:
+  metric: "AUROC_and_PRO"
+  save_heatmaps: true
+  threshold_method: "best_f1"

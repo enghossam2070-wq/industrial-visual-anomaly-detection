@@ -1,0 +1,27 @@
+# Config: Modern Deep Learning Approach - PatchCore (Roth et al., CVPR 2022)
+experiment_name: "modern_patchcore"
+category: "bottle"
+data_dir: "./data/mvtec_anomaly_detection"
+output_dir: "./experiments/modern_patchcore"
+
+model:
+  name: "patchcore"
+  backbone: "wide_resnet50_2" # or "resnet18"
+  pretrained: true
+  layers: ["layer2", "layer3"]
+  patch_size: 3
+  subsample_ratio: 0.1 # Coreset subsampling ratio (10% memory bank)
+  n_neighbors: 9
+
+training:
+  batch_size: 16
+  val_split: 0.15
+  seed: 42
+
+loss:
+  type: "MemoryBankDistance"
+
+evaluation:
+  metric: "AUROC_and_PRO"
+  save_heatmaps: true
+  threshold_method: "best_f1"

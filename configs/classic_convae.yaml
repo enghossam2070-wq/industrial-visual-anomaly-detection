@@ -1,0 +1,31 @@
+# Config: Classic Deep Convolutional Autoencoder (ConvAE) with SSIM+L2 Loss
+experiment_name: "classic_convae"
+category: "bottle"
+data_dir: "./data/mvtec_anomaly_detection"
+output_dir: "./experiments/classic_convae"
+
+model:
+  name: "classic_convae"
+  input_dim: [3, 224, 224]
+  latent_dim: 256
+  channels: [32, 64, 128, 256]
+
+training:
+  batch_size: 16
+  epochs: 50
+  learning_rate: 0.0005
+  weight_decay: 0.00005
+  optimizer: "AdamW"
+  lr_scheduler: "CosineAnnealingLR"
+  val_split: 0.15
+  seed: 42
+
+loss:
+  type: "SSIM_L2"
+  ssim_weight: 0.5
+  l2_weight: 0.5
+
+evaluation:
+  metric: "AUROC"
+  save_heatmaps: true
+  threshold_method: "best_f1"

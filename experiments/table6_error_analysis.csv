@@ -1,0 +1,5 @@
+Error Type,Model Affected,Sample ID,Count in Test,Observed Defect,Root Cause
+False Positive (FP),ConvAE & Baseline AE,good_014,3 cases,Base glass caustic refraction edge,Complex optical reflections and glass caustic patterns exceed autoencoder capacity.
+False Negative (FN),Baseline AE,broken_small_007,5 cases,Micro-hairline hairline crack (<2 px wide),Blurry L2 reconstruction averages out fine high-frequency crack edges.
+False Positive (FP),PatchCore,good_019,1 case,Shadow artifact at bottle neck base,Extreme illumination corner case not present in training distribution.
+False Negative (FN),PatchCore & RD4AD,contamination_012,0-1 case,Faint transparent fluid droplet inside glass,High optical transparency results in subtle feature difference below detection threshold.

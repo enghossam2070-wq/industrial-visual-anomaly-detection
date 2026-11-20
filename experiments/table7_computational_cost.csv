@@ -1,0 +1,5 @@
+Model Architecture,Parameters (M),Model Size (MB),Train Time (s),Inference Latency (ms),Hardware Platform,Peak Memory (MB)
+Baseline AE (Linear/Conv),0.24,0.96,42.1,3.8,NVIDIA RTX / CUDA & Intel Core i7,450
+Classic Deep ConvAE (SSIM+L2),4.12,16.48,118.5,8.2,NVIDIA RTX / CUDA & Intel Core i7,850
+Modern PatchCore (Coreset 10%),68.88,275.52,24.4,19.4,NVIDIA RTX / CUDA & Intel Core i7,1820
+Advanced Reverse Distillation (RD4AD),78.45,313.80,182.3,14.1,NVIDIA RTX / CUDA & Intel Core i7,2450
